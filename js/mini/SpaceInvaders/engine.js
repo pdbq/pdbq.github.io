@@ -59,8 +59,7 @@ function keyBoard()
 }
 
 function GameOver()
-{
-	//alert("Game over!");
+{ 
 	location.reload();
 }
 
