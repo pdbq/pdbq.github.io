@@ -60,7 +60,7 @@ function keyBoard()
 
 function GameOver()
 {
-	alert("Game over!");
+	//alert("Game over!");
 	location.reload();
 }
 
