@@ -138,7 +138,7 @@ img.onload = function()
 img.src = "data/img.png";
 
 var imgData = ctx.getImageData(0, 0, 800, 600);
-log(imgData.data);
+//log(imgData.data);
 
 
 var circles = new Array();
