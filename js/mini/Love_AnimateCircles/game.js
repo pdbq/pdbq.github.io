@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){ 
 ///////////////////////////////////////////////////////
-var fps = 60;
+var fps = 0;
 //### Функции / Functions ###\\
 //Цикл игры / game loop
 function start()
@@ -8,9 +8,10 @@ function start()
 	setTimeout(function() {
 		requestAnimationFrame(start);
 		
-		//cls();
-		//update();
-		//draw();
+		cls();
+		update();
+		draw();
+
 	}, 1000 / fps);
 };
 
@@ -43,8 +44,6 @@ function draw()
 				}
 			}
 		}
-		
-		
 		circles[i].draw();
 		circles[i].update();
 	}
@@ -74,15 +73,17 @@ function update()
 
 function newCircle()
 {
-	var x = getRandom(0, WIDTH);
-	var y = getRandom(0, HEIGHT);
+	var rand = getRandom(0, indexArr.length-1, true)
+	var x = indexArr[rand].x;
+	var y = indexArr[rand].y;
+	//log(x);
 	var valid = true;
 	for (var i = 0; i < circles.length; i++) 
 	{
 		var d = dist(x, y, circles[i].x, circles[i].y);
 		//log(d);
 
-		if(d < circles[i].r)
+		if(d < circles[i].r+2)
 		{
 			//log(valid);
 			valid = false;
@@ -93,14 +94,12 @@ function newCircle()
 	if(valid)
 	{
 		 
-		return new Circle({x: x, y: y});
+		return new Circle({x: x, y: y}, "rgb("+getRandom(0,256,true)+","+getRandom(0,256,true)+","+getRandom(0,256,true)+")");
 	}
 	else
 	{
-		
 		return NULL;
 	}
-	
 }
 function dist(x1, y1, x2, y2)
 {
@@ -108,41 +107,38 @@ function dist(x1, y1, x2, y2)
 }
 
 
-
 //Инициализация / INIT
 createCanvas(800, 600, "#000");
-//log(ctx.getImageData(0, 0, 800, 600));
+
+var indexArr = new Array();
 var img = new Image();
+
 img.onload = function()
 {
 	ctx.drawImage(img,0,0);
 	imgData = ctx.getImageData(0, 0, 800, 600);
-	for(var x = 0; x < imgData.width; x++)
-{
-	for(var y = 0; y < imgData.height; y++)
-	{
-		var index = (x + y * imgData.width)*4;
-		//var c = imgData.data[index];
-		var R = imgData.data[index];
-		var G = imgData.data[index+1];
-		var B = imgData.data[index+2];
-		var A = imgData.data[index+3];
 
-		if(R != 0 || G != 0 || B != 0 || A != 0)
+	for(var x = 0; x < imgData.width; x++)
+	{
+		for(var y = 0; y < imgData.height; y++)
 		{
-			log(1);
+			var index = (x + y * imgData.width)*4;
+			//var c = imgData.data[index];
+			var R = imgData.data[index];
+
+			if(R != 0)
+			{
+				indexArr.push({x: x, y: y});
+			}
 		}
 	}
-}
+	log(indexArr[0]);
 }
 img.src = "data/img.png";
 
 var imgData = ctx.getImageData(0, 0, 800, 600);
-//log(imgData.data);
-
 
 var circles = new Array();
-
 
 start();
 ////////////////////////////////////////////////////////

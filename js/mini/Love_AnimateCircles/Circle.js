@@ -1,18 +1,19 @@
 class Circle
 {
-	constructor(pos)
+	constructor(pos, color)
 	{
 		this.x = pos.x;
 		this.y = pos.y;
 		this.r = 1;
-		this.c = 255;
+		this.c = color;
 		this.speed = 0.2;
-
+//console.log(this.c);
 		this.groving = true;
 	}
 	draw()
 	{
-		ctx.strokeStyle = "#fff";
+		
+		ctx.strokeStyle = this.c;
 		ctx.beginPath();      
 		ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, true);            
 		ctx.stroke();
