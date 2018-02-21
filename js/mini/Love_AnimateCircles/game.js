@@ -117,12 +117,7 @@ img.onload = function()
 {
 	ctx.drawImage(img,0,0);
 	imgData = ctx.getImageData(0, 0, 800, 600);
-}
-img.src = "data/img.png";
-
-var imgData = ctx.getImageData(0, 0, 800, 600);
-log(imgData.data);
-for(var x = 0; x < imgData.width; x++)
+	for(var x = 0; x < imgData.width; x++)
 {
 	for(var y = 0; y < imgData.height; y++)
 	{
@@ -139,6 +134,12 @@ for(var x = 0; x < imgData.width; x++)
 		}
 	}
 }
+}
+img.src = "data/img.png";
+
+var imgData = ctx.getImageData(0, 0, 800, 600);
+log(imgData.data);
+
 
 var circles = new Array();
 
