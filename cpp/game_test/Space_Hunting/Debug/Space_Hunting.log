@@ -1,0 +1,12 @@
+﻿  main.cpp
+c:\game_sfml\space_hunting\space_hunting\main.cpp(17): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\game_sfml\space_hunting\space_hunting\main.cpp(52): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+c:\game_sfml\space_hunting\space_hunting\main.cpp(67): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\game_sfml\space_hunting\space_hunting\main.cpp(68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\game_sfml\space_hunting\space_hunting\main.cpp(81): warning C4018: <: несоответствие типов со знаком и без знака
+c:\game_sfml\space_hunting\space_hunting\main.cpp(103): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+c:\game_sfml\space_hunting\space_hunting\main.cpp(112): warning C4018: <: несоответствие типов со знаком и без знака
+c:\game_sfml\space_hunting\space_hunting\main.cpp(40): warning C4996: 'sf::Text::setColor': объявлен deprecate
+  c:\sfml-2.5.0\include\sfml\graphics\text.hpp(210): note:  см. объявление "sf::Text::setColor"
+  Space_Hunting.vcxproj -> C:\Game_SFML\Space_Hunting\Debug\Space_Hunting.exe
+  Space_Hunting.vcxproj -> C:\Game_SFML\Space_Hunting\Debug\Space_Hunting.pdb (Full PDB)
