@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: f2f2f2;
+    font-family: Pribambas;
+
+    background: url(../img/img.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+}
+.centered{
+    text-align: center;
+}
+
+.nav{
+    list-style-type: none;
+    margin-top: 100px;
+}
+
+.nav li{
+    display: inline;
+}
+.nav li a{
+    background-color: yellow;
+    color: black;
+    font-size: 40px;
+    vertical-align: middle;
+    padding: 1px 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 0 20px;
+}
+.nav li a:hover{
+    background-color: orange;
+    color: #333;
+    border-color: #333;
+}
+
+.catalog{
+    margin-top: 100px;
+}
+
+.catalog_btn{ 
+    background: linear-gradient(to top, orange, yellow, orange);
+    padding: 1px 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 60px;
+    color: #000;
+}
+
+.catalog_btn:hover{
+    color: #333;
+    border-color: #333;
+    background: linear-gradient(to top, yellow, orange, yellow);
+} 
+
+.desc{
+    margin: 100px auto;
+    width: 70%;
+}
+.desc h1{
+    font-weight: 500;
+    font-size: 90px;
+    color: yellow;
+    -webkit-text-stroke: 3px black;
+}
+
+@media (max-width: 647px) { 
+    .nav li{
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 565px) { 
+    .catalog_btn{ 
+        font-size: 40px;
+    }
+    .desc h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 395px) { 
+    .nav li a{
+        font-size: 30px;
+    }
+    .catalog_btn{ 
+        font-size: 30px;
+    }
+    .desc h1{
+        font-size: 40px;
+    }
+}
+
+@font-face {
+    font-family: "Pribambas"; 
+    src: url("../font/Pribambas-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+
