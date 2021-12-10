@@ -32,7 +32,7 @@ body{
     color: black;
     font-size: 40px;
     vertical-align: middle;
-    padding: 7px 20px 1px 20px;
+    padding: 7px 20px 1px;
     border: 3px solid black;
     border-radius: 15px;
     margin: 0 20px;
@@ -57,7 +57,7 @@ body{
 
 .catalog_btn{ 
     background: linear-gradient(to top, orange, yellow, orange);
-    padding: 7px 20px 1px 20px;
+    padding: 7px 20px 1px;
     border: 3px solid black;
     border-radius: 15px;
     font-size: 60px;
@@ -122,5 +122,5 @@ body{
     src: url("../font/Pribambas-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
-    } 
+} 
 
